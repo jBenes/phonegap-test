@@ -27,6 +27,15 @@
     </head>
     <body>
         <div class="app-body">
+            <p ng-controller="LangCtrl">
+                <a href="#" ng-click="setLang('en')">English</a>
+                |
+                <a href="#" ng-click="setLang('de')">German</a>
+            </p>
+
+            <h1>{{ 'TITLE' | translate }}</h1>  
+            <p>{{ 'FOO' | translate }}</p>
+
             <a href="#/">Main View</a>
             <a href="#/view">New View</a>
 
@@ -37,6 +46,7 @@
         <script type="text/javascript" src="phonegap.js"></script>
         <script type="text/javascript" src="lib/angular-1.2.0-rc3.js"></script>
         <script type="text/javascript" src="lib/angular-route.js"></script>
+        <script type="text/javascript" src="lib/angular-translate.js"></script>
 
         <!-- App -->
         <script type="text/javascript" src="js/index.js"></script>
